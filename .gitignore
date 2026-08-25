@@ -6,3 +6,8 @@ frontend/node_modules/
 frontend/dist/
 catboost_info/
 Thumbs.db
+
+firebase/firebase-key.json
+backend/firebase/firebase-key.json
+
+*.env
