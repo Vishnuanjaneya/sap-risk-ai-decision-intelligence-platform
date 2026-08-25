@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Virtual Environment
+venv/
+.env
+
+# Firebase Secrets
+serviceAccountKey.json
+firebase-adminsdk*.json
+
+# API Secrets
+.env
+.env.local
+
+# FastAPI
+catboost_info/
+.pytest_cache/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# VS Code
+.vscode/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Build Files
+build/
+dist/
+
+# Logs
+*.log
