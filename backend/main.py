@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from routers.predict import router as predict_router
 from routers.history import router as history_router
 from routers.explain import router as explain_router
-from routers.chat import router as chat_router
+from routers.copilot import router as copilot_router
 
 
 
@@ -30,7 +30,10 @@ app.include_router(
     prefix="/api",
     tags=["Explainability"]
 )
-app.include_router(chat_router)
+app.include_router(
+copilot_router,
+prefix="/api"
+)
 
 @app.get("/")
 def health_check():

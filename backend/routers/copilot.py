@@ -1,5 +1,7 @@
 from fastapi import APIRouter
+
 from schemas.copilot import CopilotRequest
+from services.groq_service import ask_copilot
 
 router = APIRouter(
     tags=["AI Copilot"]
@@ -7,8 +9,10 @@ router = APIRouter(
 
 
 @router.post("/copilot")
-def copilot(request: CopilotRequest):
+def copilot(data: CopilotRequest):
+
+    answer = ask_copilot(data.question)
 
     return {
-        "answer": f"You asked: {request.question}"
+        "answer": answer
     }
